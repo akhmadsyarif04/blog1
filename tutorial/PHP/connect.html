@@ -1,0 +1,45 @@
+<style>
+.state ul {
+  color: #575550;
+}
+</style>
+<div id="isi1">
+  <br>
+  &nbsp &nbsp &nbsp &nbsp Pertama kita bikin dulu file connect.php. Dan jangan lupa jalankan local server kalian terlebih dulu bisa XAMPP atau
+  Oracle. masukan skrip dibawah ini kedalam file connect.php tadi :
+  <pre class="brush: php">
+    &lt;?php
+    	mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot; &quot;);
+    	mysql_select_db(&quot;nama_database&quot;);
+    ?&gt;
+  </pre>
+  <br>
+  keterangan :
+  <ul type="squre">
+    <li>mysql_connect -> ini adalah perintah sql untuk mengubungkan kedatabase kalian</li>
+    <li>mysql_select_db -> ini digunakan untuk memilih nama database kalian, pasti kan sesuai dengan nama database kalian</li>
+    <li>"localhost" -> ini adalah nama host dari database kalian. Secara default nama nya localhost.
+    Dan biasanya kalau misalnya tidak berhasil dengan localhost bisa menggunakan opsi lain yaitu 127.0.0.1 </li>
+    <li>"root" -> ini adalah user dari database kalian secara default dia root.</li>
+    <li>" " -> ini adalah password. " " itu artinya password kosong. secara default passwordnya adalah kosong atau bisa juga "root"</li>
+  </ul>
+  Kalau sudah save dan letakkan didalam folder htdoc. misalkan dipartisi C: -> XAMPP -> htdocs.
+  <br>
+  Untuk cek apakah koneksi berhasil atau tidak maka gunakan skrip dibawah ini :
+  <pre class="brush: php">
+    &lt;?php
+    $connect = mysql_connect(&quot;localhost&quot;,&quot;root&quot;,&quot; &quot;);
+    $db = mysql_select_db(&quot;nama_database&quot;);
+
+    if ($connect && $db ){
+      die(&quot;koneksi berhasil&quot;);
+    }else{
+      die(&quot;gagal koneksi&quot;.mysql_connect_error);
+    }
+    ?&gt;
+  </pre>
+  Yaitu menggunakan if pada php. Dimana jikan $connect dan $db benar makan dia memberitahukan koneksi berhasil dan jika tidak makan gagal koneksi dengan pesan
+  mysql_connect_error dari sql itu sendiri.
+  <br>
+  <b>Kalau mau nanya-nanya silahkan hubungi social media saya dibagian footer</b>
+</div>

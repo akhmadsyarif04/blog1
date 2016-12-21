@@ -1,0 +1,209 @@
+
+<style>
+.state ul {
+  color: #575550;
+}
+</style>
+<div id="isi1">
+  <br>
+  &nbsp &nbsp &nbsp &nbsp Kali ini saya akan berbagi trik animasi atau pun mengubah benduk border dengan CSS3.
+  <br>
+  membuat lingkaran :
+  <style>
+  .contoh1{
+    width:200px;
+    height: 200px;
+    background-color: #20cf46;
+    border-radius: 110px 110px;
+  }
+  </style>
+  <div class="contoh1"></div>
+  <pre class="brush: css">
+  &lt;style&gt;
+  .contoh1{
+    width:200px;
+    height: 200px;
+    background-color: #20cf46;
+    border-radius: 110px 110px;
+  }
+  &lt;/style&gt;
+  &lt;div class=&quot;contoh1&quot;&gt;&lt;/div&gt;
+  </pre>
+  <br>
+  Membuat border bergerak dari kiri. untuk menampilkan klik Demo
+  <style>
+  .contoh2{
+    width:200px;
+    height: 200px;
+    background-color: #20cf46;
+    animation: contoh2  5s;
+    -webkit-animation: contoh2  5s ;
+    -moz-animation: contoh2  5s;
+  }
+  @keyframes contoh2 {
+    from{transform:translate(-1000px,0px);}
+    to{transform:translate(0px,0px);}
+  }
+  @-webkit-keyframes contoh2 {
+    from{transform:translate(-1000px,0px);}
+    to{transform:translate(0px,0px);}
+  }
+  @-moz-keyframes contoh2 {
+    from{transform:translate(-1000px,0px);opacity:0}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  @-ms-keyframes contoh2 {
+    from{transform:translate(-1000px,0px);opacity:0}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  @-o-keyframes contoh2 {
+    from{transform:translate(-1000px,0px);opacity:0}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  button {
+    width: 80px;
+    height: 40px;
+    border: 1px solid #0dbf2a;
+    font-weight: bold;
+  }
+  button:hover{
+    background-color: #207a0a;
+  }
+  </style>
+  <script>
+  function tampilkan2(){
+    var menu = document.getElementById('contoh2');
+    menu.classList.toggle('contoh2');
+  }
+  </script>
+  <div id="contoh2"></div>
+  <br>
+  <button type="button" onclick="tampilkan2()">Demo</button>
+  <p>
+  contoh skrip :
+  <pre class="brush: css">
+    &lt;style&gt;
+      .contoh2{
+        width:200px;
+        height: 200px;
+        background-color: #20cf46;
+        animation: contoh2  5s;
+        -webkit-animation: contoh2  5s ;
+        -moz-animation: contoh2  5s;
+      }
+      @keyframes contoh2 {
+      from{transform:translate(-1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-webkit-keyframes contoh2 {
+      from{transform:translate(-1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-moz-keyframes contoh2 {
+      from{transform:translate(-1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-ms-keyframes contoh2 {
+      from{transform:translate(-1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-o-keyframes contoh2 {
+      from{transform:translate(-1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;contoh2&quot;&gt;&lt;/div&gt;
+  </pre>
+  Karena tidak semua browser mendukung CSS3 maka kita harus melakukan secara manual untuk membuat animasi nya bekerja pada browser lain<p>
+  Keterangan :<p>
+  -webkit-animation => untuk Crome &amp Safari.<p>
+  -moz-animation => untuk Firefox.<p>
+  -o-animation => untuk Opera.<p>
+  -ms-animation => untuk Internet Explorer.<p>
+  <br>
+  Membuat border bergerak dari kanan. untuk menampilkan klik Demo
+  <style>
+  .contoh3{
+    width:200px;
+    height: 200px;
+    background-color: #20cf46;
+    animation: contoh3  5s;
+    -webkit-animation: contoh3  5s ;
+    -moz-animation: contoh3  5s;
+  }
+  @keyframes contoh3 {
+    from{transform:translate(1000px,0px);}
+    to{transform:translate(0px,0px);}
+  }
+  @-webkit-keyframes contoh3 {
+    from{transform:translate(1000px,0px);}
+    to{transform:translate(0px,0px);}
+  }
+  @-moz-keyframes contoh3 {
+    from{transform:translate(1000px,0px);opacity:0;}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  @-ms-keyframes contoh3 {
+    from{transform:translate(1000px,0px);opacity:0;}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  @-o-keyframes contoh3 {
+    from{transform:translate(1000px,0px);opacity:0;}
+    to{transform:translate(0px,0px);opacity:1.1;}
+  }
+  button {
+    width: 80px;
+    height: 40px;
+    border: 1px solid #0dbf2a;
+    font-weight: bold;
+  }
+  button:hover{
+    background-color: #207a0a;
+  }
+  </style>
+  <script>
+  function tampilkan3(){
+    var menu = document.getElementById('contoh3');
+    menu.classList.toggle('contoh3');
+  }
+  </script>
+  <div id="contoh3"></div>
+  <br>
+  <button type="button" onclick="tampilkan3()">Demo</button><p>
+  contoh skrip :
+  <pre class="brush: css">
+    &lt;style&gt;
+      .contoh3{
+        width:200px;
+        height: 200px;
+        background-color: #20cf46;
+        animation: contoh3  5s;
+        -webkit-animation: contoh3  5s ;
+        -moz-animation: contoh3  5s;
+      }
+      @keyframes contoh3 {
+      from{transform:translate(1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-webkit-keyframes contoh3 {
+      from{transform:translate(1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-moz-keyframes contoh3 {
+      from{transform:translate(1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-ms-keyframes contoh3 {
+      from{transform:translate(1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+      @-o-keyframes contoh3 {
+      from{transform:translate(1000px,0px);opacity:0;}
+      to{transform:translate(0px,0px);opacity:1.1;}
+      }
+    &lt;/style&gt;
+    &lt;div class=&quot;contoh3&quot;&gt;&lt;/div&gt;
+  </pre>
+  <br>
+  <b>Kalau mau nanya-nanya silahkan hubungi social media saya dibagian footer</b>
+</div>
